@@ -4,11 +4,11 @@ using OpenQA.Selenium;
 
 namespace Competition
 {
-    internal class HomePage
+    internal class ShareSkillPage
     {
         private IWebDriver driver;
 
-        public HomePage(IWebDriver driver)
+        public ShareSkillPage(IWebDriver driver)
         {
             this.driver = driver;
         }
@@ -74,10 +74,11 @@ namespace Competition
              Thread.Sleep(2000);*/
 
             //Click on PLUS button
-         // IWebElement m =  driver.FindElement(By.XPath("//i[@class='huge plus circle icon padding-25']"));
-         //   m.Click();
-           // Thread.Sleep(2000);
-          //  m.SendKeys("C:\\Users\\sra1\\Desktop\\Webdriver Commands");
+          IWebElement m =  driver.FindElement(By.XPath("//i[@class='huge plus circle icon padding-25']"));
+            m.Click();
+            Thread.Sleep(2000);
+           // driver.SwitchTo().Window("File Upload");
+          // m.SendKeys("C:\\Users\\sra1\\Desktop\\Webdriver Commands.txt");
 
 
             //Click Hiddden Bullet
@@ -87,6 +88,7 @@ namespace Competition
             //Click Save button
             driver.FindElement(By.XPath("//input[@class='ui teal button'][@value='Save']")).Click();
             Thread.Sleep(2000);
+
 
 
 

@@ -37,12 +37,21 @@ namespace Competition
             public void AddShareSkill()
         {
 
-            HomePage h = new HomePage(driver);
+            ShareSkillPage h = new ShareSkillPage(driver);
             h.ClickShareSkill();
            
 
 
         }
+
+             [Test]
+
+               public void ManageListings()
+        {
+            ManageListingsPage k = new ManageListingsPage(driver);
+            k.ActiveManageListings();
+        }
+
 
             [TearDown]
 
