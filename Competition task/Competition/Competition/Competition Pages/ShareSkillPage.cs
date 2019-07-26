@@ -7,6 +7,7 @@ namespace Competition
     internal class ShareSkillPage
     {
         private IWebDriver driver;
+      
 
         public ShareSkillPage(IWebDriver driver)
         {
@@ -61,24 +62,35 @@ namespace Competition
             driver.FindElement(By.XPath("//input[@name='endDate']")).SendKeys("19072019");
             Thread.Sleep(2000);
 
+            //Enable the days
+            driver.FindElement(By.XPath("//input[@tabindex='0'][@index='0'][@name='Available']")).Click();
+            driver.FindElement(By.XPath("//input[@tabindex='0'][@index='1'][@name='Available']")).Click();
+            driver.FindElement(By.XPath("//input[@tabindex='0'][@index='2'][@name='Available']")).Click();
+            driver.FindElement(By.XPath("//input[@tabindex='0'][@index='3'][@name='Available']")).Click();
+            driver.FindElement(By.XPath("//input[@tabindex='0'][@index='4'][@name='Available']")).Click();
+            driver.FindElement(By.XPath("//input[@tabindex='0'][@index='5'][@name='Available']")).Click();
+            driver.FindElement(By.XPath("//input[@tabindex='0'][@index='6'][@name='Available']")).Click();
+
+
             //Enter Skill Trade
             driver.FindElement(By.XPath("//input[@name='skillTrades'][@value='false']")).Click();
             Thread.Sleep(2000);
 
             //Enter Skill-Exchange
 
-            /* IWebElement l = driver.FindElement(By.XPath("(//input[@class='ReactTags__tagInputField'])[2]"));
+           /* IWebElement l = driver.FindElement(By.XPath("(//div[@class='ReactTags__tagInput']/input)[2]"));
              l.SendKeys("TAGGS");
              Thread.Sleep(2000);
              l.SendKeys(Keys.Enter);
-             Thread.Sleep(2000);*/
+             Thread.Sleep(2000);
+
 
             //Click on PLUS button
           IWebElement m =  driver.FindElement(By.XPath("//i[@class='huge plus circle icon padding-25']"));
             m.Click();
             Thread.Sleep(2000);
-           // driver.SwitchTo().Window("File Upload");
-          // m.SendKeys("C:\\Users\\sra1\\Desktop\\Webdriver Commands.txt");
+            driver.SwitchTo().Window("File Upload");
+          m.SendKeys("C:\\Users\\sra1\\Desktop\\Webdriver Commands.txt");*/
 
 
             //Click Hiddden Bullet
