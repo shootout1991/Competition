@@ -1,15 +1,17 @@
 ﻿using System;
 using System.Threading;
+using AventStack.ExtentReports;
 using OpenQA.Selenium;
 
 namespace Competition
 {
     internal class LoginPage
     {
-        private IWebDriver driver;
+        IWebDriver driver;
+       
 
         public LoginPage(IWebDriver driver)
-        {
+        {   
             this.driver = driver;
         }
 
@@ -22,17 +24,15 @@ namespace Competition
         internal void LoginSuccess()
         {
 
-            //Navigate to Mars Page
-            driver.Navigate().GoToUrl("http://www.skillswap.pro/");
-
-            //Maximize the screen
-            driver.Manage().Window.Maximize();
-
             //Click on Sign-In button
             driver.FindElement(By.XPath("//a[@class='item'][text()='Sign In']")).Click();
+            
+
 
             //Enter Username
             username.SendKeys("sravanramba7991@gmail.com");
+
+          
 
             //Enter password
             password.SendKeys("sravan@1991");

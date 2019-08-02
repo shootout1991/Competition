@@ -63,7 +63,8 @@ namespace Competition
             Thread.Sleep(2000);
 
             //Enable the days
-            driver.FindElement(By.XPath("//input[@tabindex='0'][@index='0'][@name='Available']")).Click();
+            driver.FindElement(By.XPath("//inpu" +
+                "t[@tabindex='0'][@index='0'][@name='Available']")).Click();
             driver.FindElement(By.XPath("//input[@tabindex='0'][@index='1'][@name='Available']")).Click();
             driver.FindElement(By.XPath("//input[@tabindex='0'][@index='2'][@name='Available']")).Click();
             driver.FindElement(By.XPath("//input[@tabindex='0'][@index='3'][@name='Available']")).Click();
@@ -73,19 +74,31 @@ namespace Competition
 
 
             //Enter Skill Trade
-            driver.FindElement(By.XPath("//input[@name='skillTrades'][@value='false']")).Click();
+            driver.FindElement(By.XPath("//input[@name='skillTrades'][@tabindex='0'][@value='false']")).Click();
             Thread.Sleep(2000);
 
             //Enter Skill-Exchange
 
-           /* IWebElement l = driver.FindElement(By.XPath("(//div[@class='ReactTags__tagInput']/input)[2]"));
-             l.SendKeys("TAGGS");
+            /* IWebElement l = driver.FindElement(By.XPath("(//INPUT[@class='ReactTags__tagInputField'])[2]"));
+
              Thread.Sleep(2000);
-             l.SendKeys(Keys.Enter);
-             Thread.Sleep(2000);
+             l.SendKeys("Tag1");
+            l.SendKeys(Keys.Enter);*/
 
 
-            //Click on PLUS button
+            ITakesScreenshot ts = driver as ITakesScreenshot;
+            Screenshot screenshot = ts.GetScreenshot();
+            screenshot.SaveAsFile("C:\\Users\\sra1\\Desktop\\Internhip\\screenshot.png");
+            
+
+              
+
+            
+
+
+
+
+            /*//Click on PLUS button
           IWebElement m =  driver.FindElement(By.XPath("//i[@class='huge plus circle icon padding-25']"));
             m.Click();
             Thread.Sleep(2000);
